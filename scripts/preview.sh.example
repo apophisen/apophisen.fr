@@ -14,9 +14,11 @@ export DISCORD_PUBLIC_KEY="<development Discord application public key>"
 export NUXT_PUBLIC_DISCORD_CLIENT_ID="<development Discord application client id>"
 
 # Build and start the production server in development environment
-if [ "$1" = "skip-build" ]; then
+if [ "$1" != "skip-build" ]; then
   echo 'Building project (preview)...'
   grep -m 1 "Total size" <(nuxt build) # Wait for second to last line from build process
 fi
-echo 'Starting server (preview)...'
-node .output/server/index.mjs
+if [ "$1" != "build-only" ]; then
+  echo 'Starting server (preview)...'
+  node .output/server/index.mjs
+fi
