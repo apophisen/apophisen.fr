@@ -1,0 +1,10 @@
+{
+  "editor.quickSuggestions": { "strings": true },
+  "editor.tabSize": 2,
+  "files.associations": { "*.css": "tailwindcss" },
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "ui"],
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["/\\*ui\\*/\\s*{([^;]*)}", ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"]
+  ]
+}

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Production web server variables
+export AES_KEY="<256-bit encryption key>"
+export NITRO_SSL_CERT="<path to fullchain.pem>"
+export NITRO_SSL_KEY="<path to privkey.pem>"
+export NUXT_PUBLIC_HOST_URL="<production url>"
+export PORT="<desired listening port>"
+
+# MongoDB secrets
+export MONGODB_URL="<MongoDB production database connection URL>"
+
+# Discord bot & OAuth2 secrets
+export DISCORD_CLIENT_SECRET="<production Discord application client secret>"
+export DISCORD_BOT_TOKEN="<production Discord bot token>"
+export DISCORD_PUBLIC_KEY="<production Discord application public key>"
+export NUXT_PUBLIC_DISCORD_CLIENT_ID="<production Discord application client id>"
+
+# Build and start the production server
+if [ "$1" = "skip-build" ]; then
+  echo 'Building project...'
+  grep -m 1 "Total size" <(nuxt build) # Wait for second to last line from build process
+fi
+echo 'Starting server...'
+node .output/server/index.mjs

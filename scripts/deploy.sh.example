@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ "$1" = "dev" ]; then
+  export DISCORD_BOT_TOKEN="<development Discord bot token>"
+  export DISCORD_CLIENT_ID="<development Discord application client id>"
+elif [ "$1" = "prod" ]; then
+  export DISCORD_BOT_TOKEN="<production Discord bot token>"
+  export DISCORD_CLIENT_ID="<production Discord application client id>"
+else
+  echo 'Invalid argument. Please specify "dev" or "prod".'
+  exit 1
+fi
+
+node scripts/deployCommands.js

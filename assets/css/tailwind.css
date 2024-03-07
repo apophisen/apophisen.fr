@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-display: swap;
+  font-family: 'Bahnschrift';
+  src: url('~/assets/fonts/Bahnschrift.ttf') format('truetype');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Century Gothic';
+  src: url('~/assets/fonts/CenturyGothic.ttf') format('truetype');
+}

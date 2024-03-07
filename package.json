@@ -1,0 +1,41 @@
+{
+  "name": "apophisen.fr-edge",
+  "author": "Bastien 'BayDev' Vénier <hello@baydev.me> (https://baydev.me)",
+  "contributors": [
+    "Roméo Soccio (https://github.com/RomeoSoccio)"
+  ],
+  "license": "Apache-2.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "deploy": "bash scripts/deploy.sh",
+    "dev": "bash scripts/dev.sh",
+    "ngrok": "bash scripts/ngrok.sh",
+    "postinstall": "nuxt prepare",
+    "prettier": "prettier --write --list-different .",
+    "preview": "bash scripts/preview.sh",
+    "prod": "bash scripts/prod.sh"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^1.7.0",
+    "@discordjs/core": "1.1.1",
+    "@discordjs/rest": "2.2.0",
+    "@formkit/auto-animate": "^0.8.1",
+    "@nuxt/image": "^1.4.0",
+    "@nuxt/ui": "^2.14.2",
+    "@nuxtjs/seo": "^2.0.0-rc.8",
+    "discord-interactions": "^3.4.0",
+    "mongoose": "^8.2.1",
+    "nuxt": "^3.10.3",
+    "nuxt-security": "^1.2.1",
+    "ts-import": "^5.0.0-beta.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@ngrok/ngrok": "^1.1.0",
+    "@nuxt/devtools": "^1.0.8",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  }
+}

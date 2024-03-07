@@ -1,0 +1,8 @@
+{
+  "arrowParens": "avoid",
+  "jsxSingleQuote": true,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "printWidth": 100,
+  "singleQuote": true,
+  "vueIndentScriptAndStyle": true
+}

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Development web server variables
+export AES_KEY="<256-bit encryption key>"
+export NUXT_PUBLIC_HOST_URL="http://localhost:3000"
+
+# MongoDB secrets
+export MONGODB_URI="<MongoDB development database connection URL>"
+
+# Discord bot & OAuth2 secrets
+export DISCORD_CLIENT_SECRET="<development Discord application client secret>"
+export DISCORD_BOT_TOKEN="<development Discord bot token>"
+export DISCORD_PUBLIC_KEY="<development Discord application public key>"
+export NUXT_PUBLIC_DISCORD_CLIENT_ID="<development Discord application client id>"
+
+# Start the development server
+echo 'Starting server...'
+nuxt dev

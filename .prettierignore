@@ -1,0 +1,10 @@
+# ts-import builds
+.cache
+
+# Nuxt dev/build outputs
+.output
+.nuxt
+
+# npm dependencies
+package-lock.json
+node_modules

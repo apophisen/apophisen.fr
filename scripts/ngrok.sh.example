@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export NGROK_AUTHTOKEN="<ngrok auth token>"
+export NGROK_DOMAIN="<registered subdomain>.ngrok-free.app"
+
+echo 'Starting ngrok...'
+node scripts/ngrokSession.js

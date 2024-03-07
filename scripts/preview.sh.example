@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Development web server variables
+export AES_KEY="<256-bit encryption key>"
+export NUXT_PUBLIC_HOST_URL="http://localhost:3000"
+
+# MongoDB secrets
+export MONGODB_URI="<MongoDB development database connection URL>"
+
+# Discord bot & OAuth2 secrets
+export DISCORD_CLIENT_SECRET="<development Discord application client secret>"
+export DISCORD_BOT_TOKEN="<development Discord bot token>"
+export DISCORD_PUBLIC_KEY="<development Discord application public key>"
+export NUXT_PUBLIC_DISCORD_CLIENT_ID="<development Discord application client id>"
+
+# Build and start the production server in development environment
+if [ "$1" = "skip-build" ]; then
+  echo 'Building project (preview)...'
+  grep -m 1 "Total size" <(nuxt build) # Wait for second to last line from build process
+fi
+echo 'Starting server (preview)...'
+node .output/server/index.mjs
